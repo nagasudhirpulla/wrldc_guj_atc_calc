@@ -1,0 +1,8 @@
+{
+    "sellerId": "",
+    "wbesBaseUrl": "",
+    "appPrefix": "",
+    "flaskSecret": "",
+    "flaskPort": "80",
+    "mode": "p"
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gujarat Import ATC Calculation</title>
+</head>
+
+<body>
+    <h2>Gujarat Import ATC calculation</h2>
+    <form method="post">
+        <input type="date" name="targetDt" value="{{inpDtStr}}" required/>
+        <button>Submit</button>
+    </form>
+    <br/>
+    {% if schRows %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Block</th>
+                    <th>SSP Schedule</th>
+                    <th>Gujarat Import TTC</th>
+                    <th>Gujarat Import Reliability Margin</th>
+                    <th>Gujarat Import ATC</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for s in schRows %}
+                    <tr>
+                        <td>{{s["sch_date"]}}</td>
+                        <td>{{s["block"]}}</td>
+                        <td>{{s["SSP_Sch"]}}</td>
+                        <td>{{s["Imp_TTC"]}}</td>
+                        <td>{{s["RM"]}}</td>
+                        <td>{{s["Imp_ATC"]}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+    <style>
+        table,
+        td,
+        th {
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        th,
+        td {
+            padding: 4px;
+        }
+    </style>
+</body>
+</html>
