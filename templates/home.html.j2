@@ -32,10 +32,10 @@
                     <tr>
                         <td>{{s["sch_date"]}}</td>
                         <td>{{s["block"]}}</td>
-                        <td>{{s["SSP_Sch"]}}</td>
-                        <td>{{s["Imp_TTC"]}}</td>
-                        <td>{{s["RM"]}}</td>
-                        <td>{{s["Imp_ATC"]}}</td>
+                        <td>{{s["SSP_Sch"]|int}}</td>
+                        <td>{{s["Imp_TTC"]|int}}</td>
+                        <td>{{s["RM"]|int}}</td>
+                        <td>{{s["Imp_ATC"]|int}}</td>
                     </tr>
                 {% endfor %}
             </tbody>
